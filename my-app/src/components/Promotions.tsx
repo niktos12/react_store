@@ -11,7 +11,7 @@ export function Promotions(){
             >
                 Promotions
             </h1>
-            <div className="grid grid-cols-[repeat(3,500px)] gap-4">
+            <div className="grid grid-cols-[repeat(3,350px)] gap-4">
                 { products.map(product => <Product product={product} key={product.id}/>) }
             </div>
             
