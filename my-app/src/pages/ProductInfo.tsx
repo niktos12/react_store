@@ -3,6 +3,8 @@ import { IProduct } from "../models";
 import {useParams} from "react-router-dom";
 import {useProducts} from "../hooks/products";
 import { BsFillStarFill } from "react-icons/bs";
+import { Loading } from "../components/Loading";
+
           
 
 interface ProductProps{
@@ -16,8 +18,13 @@ export function ProductInfo(props : any) {
 
     const product = products.find((product) => product.id === Number(id));    
 
+    const {loading, error} = useProducts();
+
     return(
+        
         <div className="">
+            {loading && <Loading/>}
+            
             <Header/>
             <div 
                 className="flex flex-row justify-center gap-20 items-start mt-20 bg-slate-200 shadow-lg p-20"
