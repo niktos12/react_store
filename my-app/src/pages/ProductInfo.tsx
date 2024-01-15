@@ -23,12 +23,13 @@ export function ProductInfo(props : any) {
     return(
         
         <div className="">
-            {loading && <Loading/>}
+            
             
             <Header/>
             <div 
                 className="flex flex-row justify-center gap-20 items-start mt-20 bg-slate-200 shadow-lg p-20"
             >
+                {loading && <Loading />}
                 <div className="">
                     <img 
                         src={product?.image} 

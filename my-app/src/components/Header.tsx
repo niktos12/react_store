@@ -1,9 +1,12 @@
 import { BsCart4 } from "react-icons/bs";
+import { Link } from "react-router-dom";
+import { Toaster } from "react-hot-toast";
 export function Header(){
     return(
         <div 
             className="flex flex-row justify-around items-center p-4"
         >
+            <Toaster position="top-center"/>
             <a
              className="text-3xl font-bold select-none"
              href="/"
@@ -37,7 +40,7 @@ export function Header(){
                 >
                     Reviews
                 </a>
-                <BsCart4 className="text-2xl cursor-pointer"/>
+                <Link to={"/cart"}><BsCart4 className="text-2xl cursor-pointer"/></Link>
             </div>
         </div>
     )
