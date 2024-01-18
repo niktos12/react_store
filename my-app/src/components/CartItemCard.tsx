@@ -8,19 +8,20 @@ interface CartItemCardProps {
 }
 
 const CartItemCard: React.FC<CartItemCardProps> = ({ product }) => {
-//   const { increaseQuantity, decreaseQuantity, removeItemFromCart } =
-//     useCartStore();
-//   const onIncreaseQuantity = (productId: number) => {
-//     increaseQuantity(productId);
-//   };
+  const { increaseQuantity, decreaseQuantity , removeItemFromCart} =
+  useCartStore();
+const onIncreaseQuantity = (productId: number) => {
+  increaseQuantity(productId);
+};
 
-//   const onDecreaseQuantity = (productId: number) => {
-//     decreaseQuantity(productId);
-//   };
+const onDecreaseQuantity = (productId: number) => {
+  decreaseQuantity(productId);
+};
 
-//   const onRemoveItem = (productId: number) => {
-//     removeItemFromCart(productId);
-//   };
+
+const onRemoveItem = (productId: number) => {
+  removeItemFromCart(productId);
+};
 
   return (
     <div 
@@ -47,21 +48,21 @@ const CartItemCard: React.FC<CartItemCardProps> = ({ product }) => {
 
       <div className="flex justify-center items-center gap-5 mb-2">
         <button
-        //   onClick={() => onIncreaseQuantity(product.id)}
+          onClick={() => onIncreaseQuantity(product.id)}
           title="Increase quantity"
           className="bg-orange-500 px-2 py-2 text-white rounded-full"
         >
           <Plus />
         </button>
         <button
-        //   onClick={() => onDecreaseQuantity(product.id)}
+          onClick={() => onDecreaseQuantity(product.id)}
           title="Decrease Quantity"
           className="bg-orange-500 px-2 py-2 text-white rounded-full"
         >
           <Minus />
         </button>
         <button
-        //   onClick={() => onRemoveItem(product.id)}
+          onClick={() => onRemoveItem(product.id)}
           title="Remove item from cart"
           className="bg-orange-500 px-2 py-2 text-white rounded-full"
         >

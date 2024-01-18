@@ -5,9 +5,9 @@ import  CartItemCard  from "../components/CartItemCard"
 
 
 export function AddedInCart(){
-    const {product} = useCartStore();
+    const {cartItems} = useCartStore();
 
-    if(product && product.length < 1){
+    if(cartItems && cartItems.length < 1){
         return(
             <div>
                 <Header/>
@@ -21,7 +21,7 @@ export function AddedInCart(){
             <Header/>
             <h1 className="text-center text-4xl font-bold mt-20 mb-10">Cart</h1>
             <div className="grid grid-cols-[repeat(2,450px)] gap-4 justify-center">
-        {product?.map((item) => (
+        {cartItems?.map((item) => (
           <CartItemCard product={item}  key={item.id}/>
         ))}
       </div>
