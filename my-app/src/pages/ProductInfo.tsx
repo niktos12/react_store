@@ -4,6 +4,9 @@ import {useParams} from "react-router-dom";
 import {useProducts} from "../hooks/products";
 import { BsFillStarFill } from "react-icons/bs";
 import { Loading } from "../components/Loading";
+import  useCartStore  from "../hooks/useStore";
+import { toast } from "react-hot-toast";
+
 
           
 
@@ -13,12 +16,19 @@ interface ProductProps{
 export function ProductInfo(props : any) {
     const {products} = useProducts();
     const {id} = useParams();
+    const {addItemToCart} = useCartStore();
+    
     // console.log(id)
     // console.log(typeof(id))
 
     const product = products.find((product) => product.id === Number(id));    
 
     const {loading, error} = useProducts();
+    
+    const onAddToCart = () => {
+        addItemToCart(product as IProduct);
+        toast.success("Added to cart", {});
+      };
 
     return(
         
@@ -53,7 +63,8 @@ export function ProductInfo(props : any) {
                     >
                         Category: {product?.category}
                     </p>
-                    <button 
+                    <button
+                        onClick={onAddToCart} 
                         className="bg-yellow-500 text-white rounded-2xl px-4 py-2 mt-4 hover:bg-yellow-600 duration-300 font-bold"
                     >
                         Buy for {product?.price}$

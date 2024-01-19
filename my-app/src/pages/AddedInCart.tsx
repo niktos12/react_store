@@ -2,14 +2,18 @@ import { Header } from "../components/Header"
 import { Link } from "react-router-dom"
 import useCartStore from "../hooks/useStore"
 import  CartItemCard  from "../components/CartItemCard"
+import { Loading } from "../components/Loading";
+import {useProducts} from "../hooks/products";
 
 
 export function AddedInCart(){
     const {cartItems} = useCartStore();
+    const {loading} = useProducts();
 
     if(cartItems && cartItems.length < 1){
         return(
             <div>
+                {loading && <Loading/>}
                 <Header/>
                 <h1 className="text-center text-4xl font-bold mt-20">Cart is empty</h1>
             </div>
