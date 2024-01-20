@@ -9,11 +9,10 @@ export function Presentation(){
                 <h2 
                     className="text-5xl font-bold"
                 >
-                    Welcome to 
-                    <span 
+                    Welcome to <span 
                         className="text-yellow-500"
-                    >
-                        Mi
+                     >
+                         Mi
                     </span>
                     Clothes
                 </h2>
