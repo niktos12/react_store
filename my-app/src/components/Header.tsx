@@ -12,7 +12,7 @@ export function Header(){
             <Toaster position="top-center"/>
             <a
              className="text-3xl font-bold select-none"
-             href="/"
+             href=""
             >
                 <span className="text-yellow-500">Mi</span>Clothes
             </a>
