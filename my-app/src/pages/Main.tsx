@@ -3,10 +3,9 @@ import { Presentation } from '../components/Presentation'
 import { Promotions } from '../components/Promotions'
 import { Loading } from '../components/Loading'
 import { useProducts } from '../hooks/products'
-import { AddedInCart } from './AddedInCart'
 
 export function MainPage() {
-	const { loading, error, products } = useProducts()
+	const { loading } = useProducts()
 
 	return (
 		<div>

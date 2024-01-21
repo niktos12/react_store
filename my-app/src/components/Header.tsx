@@ -10,12 +10,12 @@ export function Header(){
             className="flex flex-row justify-around items-center p-4"
         >
             <Toaster position="top-center"/>
-            <a
+            <Link
              className="text-3xl font-bold select-none"
-             href=""
+             to="/react_store"
             >
                 <span className="text-yellow-500">Mi</span>Clothes
-            </a>
+            </Link>
             <div 
                 className="flex flex-row gap-4 items-center"
             >
