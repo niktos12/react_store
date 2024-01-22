@@ -33,8 +33,6 @@ export function ProductInfo(props : any) {
     return(
         
         <div className="">
-            
-            
             <Header/>
             <div 
                 className="flex flex-row justify-center gap-20 items-start mt-20 bg-slate-200 shadow-lg p-20"
@@ -44,7 +42,7 @@ export function ProductInfo(props : any) {
                     <img 
                         src={product?.image} 
                         alt="" 
-                        className="w-[500px] rounded-3xl max-w-none"
+                        className="w-[500px] rounded-3xl max-w-none x:w-[350px]"
                     />
                 </div>
                 <div className="bg-white p-4 rounded-3xl">

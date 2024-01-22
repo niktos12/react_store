@@ -13,6 +13,15 @@ body {
   box-sizing: border-box;
   animation: animloader 1s linear infinite;
 }
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+
+::-webkit-scrollbar-thumb {
+  background: black !important;
+  border-radius: 20px;
+}
 
 @keyframes animloader {
   0% {

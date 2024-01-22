@@ -14,7 +14,7 @@ export function Presentation(){
                      >
                          Mi
                     </span>
-                    Clothes
+                    Store
                 </h2>
                 <h3 
                     className="text-3xl"

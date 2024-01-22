@@ -23,7 +23,7 @@ export function AddedInCart() {
 			<Header />
 			<h1 className="text-center text-4xl font-bold mt-20 mb-10">Cart</h1>
 			<OrderValue />
-			<div className="grid grid-cols-[repeat(2,450px)] gap-4 justify-center">
+			<div className="grid grid-cols-[repeat(2,450px)] gap-4 justify-center lg:grid-cols-[repeat(2,350px)] sm:grid-cols-[repeat(1,450px)]">
 				{cartItems?.map(item => (
 					<CartItemCard product={item} key={item.id} />
 				))}

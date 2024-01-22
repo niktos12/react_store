@@ -7,11 +7,11 @@ export function Promotions(){
             className="flex flex-col justify-center items-center"
         >
             <h1 
-                className="text-4xl font-bold mt-4"
+                className="text-4xl font-bold mt-4 mb-2"
             >
                 Promotions
             </h1>
-            <div className="grid grid-cols-[repeat(3,350px)] gap-4">
+            <div className="grid grid-cols-[repeat(3,350px)] gap-4 x:grid-cols-[repeat(2,350px)] sm:grid-cols-[repeat(2,250px)]">
                 { products.map(product => <Product product={product} key={product.id}/>) }
             </div>
             
