@@ -26,7 +26,7 @@ export function Presentation(){
                 className=""
             >
                 <h1 
-                    className="text-8xl text-white bg-orange-500 rounded-3xl p-4 rotate-6 shadow-2xl select-none font-bold"
+                    className="text-8xl text-white bg-orange-500 rounded-3xl p-4 rotate-6 shadow-2xl select-none font-bold xs:text-6xl"
                 >
                     Mi
                 </h1>
